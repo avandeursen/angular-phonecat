@@ -1,3 +1,6 @@
+sudo: false
+
+
 language: node_js
 node_js:
   - 0.10
@@ -10,4 +13,4 @@ before_script:
   - npm run update-webdriver
 
 script:
-  - scripts/private/test-all.sh
+  - bash scripts/private/test-all.sh
