@@ -13,13 +13,21 @@ module.exports = function(config){
       'test/unit/**/*.js'
     ],
 
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
+
     autoWatch : true,
 
     frameworks: ['jasmine'],
 
-    browsers : ['Firefox'],
+    browsers : ['Chrome_travis_ci'],
 
     plugins : [
+            'karma-chrome-launcher',
             'karma-firefox-launcher',
             'karma-jasmine'
             ],
